@@ -90,7 +90,12 @@ public class Baseclasss
 	    				}
 	    			System.out.println();
 	     		}
+
 	
 	    
+
+	    }
+	
+
 	
 }
