@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="40046" started-at="2019-07-04T02:22:48Z" finished-at="2019-07-04T02:23:28Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="40046" started-at="2019-07-04T02:22:48Z" finished-at="2019-07-04T02:23:28Z">
+      <class name="com.ypo.base.Baseclasss">
+        <test-method status="PASS" signature="setupbrowser(java.lang.String)[pri:0, instance:com.ypo.base.Baseclasss@1baeedf]" name="setupbrowser" is-config="true" duration-ms="31163" started-at="2019-07-04T02:22:48Z" finished-at="2019-07-04T02:23:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupbrowser -->
+        <test-method status="PASS" signature="testfire()[pri:0, instance:com.ypo.base.Baseclasss@1baeedf]" name="testfire" duration-ms="8814" started-at="2019-07-04T02:23:19Z" finished-at="2019-07-04T02:23:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testfire -->
+      </class> <!-- com.ypo.base.Baseclasss -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
