@@ -3,6 +3,7 @@ package com.ypo.base;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -21,12 +22,14 @@ import org.testng.annotations.Test;
 
 public class Baseclasss 
 {
-	public WebDriver driver;
+	public static WebDriver driver;
+	public Logger logger;
 	@Parameters("browser")
 	@BeforeClass
     public void setupbrowser(String br)
     {
-   	   	 
+		 logger=Logger.getLogger("ypoconnect");
+    	 PropertyConfigurator.configure("log4j.properties");  	 
    	 if(br.equals("chrome"))
    	 {
    	 System.setProperty("webdriver.chrome.driver","D:\\workspace\\sample\\chromedriver.exe");
@@ -38,6 +41,7 @@ public class Baseclasss
      driver=new ChromeDriver();
    	 }
    	 driver.get("https://www.google.com");
+   	 logger.info("url lauynched");
    	 driver.manage().window().maximize();
      }
 	 @AfterClass
@@ -56,6 +60,16 @@ public class Baseclasss
 	    	String generatedstring=RandomStringUtils.randomAlphabetic(i);
 	    	return generatedstring;
 	    }
+	 
+	 public void waitforpage()
+	 {
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	 }
+	 public void waitforstep() throws Throwable
+	 {
+		 Thread.sleep(3000);
+	 }
+	 
 	 public void webtable(WebDriver driver,int x,int y)
 	    {
 	    	int i=x,j=y;
@@ -77,6 +91,6 @@ public class Baseclasss
 	    			System.out.println();
 	     		}
 	
-	
+	    
 	
 }
